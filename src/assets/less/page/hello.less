@@ -1,0 +1,51 @@
+.hello {
+    width: 100vw;
+    height: 100vh;
+    background-color: #5e5e5e;
+    position: relative;
+    text-align: center;
+    .logo {
+        width: 444px;
+        height: 268px;
+    }
+    .hello-title {
+        color: #fff;
+        margin: 20px 0;
+        font-size: 50px;
+        animation: tada 2s ease-in-out infinite;
+    }
+    .username {
+        margin: 20px 0;
+    }
+    .btn-start {
+        height: 50px;
+        font-size: 20px;
+    }
+    .hello-content {
+        top: 0;
+        left: 50%;
+        position: absolute;
+        transform: translateX(-50%);
+    }
+}
+@keyframes tada {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  10%, 20% {
+    transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+  }
+
+  30%, 50%, 70%, 90% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+
+  40%, 60%, 80% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}

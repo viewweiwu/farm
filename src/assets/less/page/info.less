@@ -1,0 +1,268 @@
+.user {
+    left: 10px;
+    bottom: 120px;
+    font-size: 20px;
+    position: fixed;
+}
+.model-setting {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, .5);
+    transition: transform 300ms ease-out;
+    &.hide {
+        transform: translate(0, -100%);
+    }
+    .content {
+        top: 30%;
+        left: 50%;
+        width: 500px;
+        border-radius: 3px;
+        background-color: #fff;
+        overflow: hidden;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        .header {
+            padding: 10px 15px;
+            border-bottom: .5px solid #eee;
+            font-size: 1.2em;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            .btn-close {
+                cursor: pointer;
+            }
+        }
+        .body {
+            padding: 10px 15px;
+        }
+        .footer {
+            padding: 10px 15px;
+            border-top: .5px solid #eee;
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+}
+.item-setting.item-setting {
+    margin-bottom: 0;
+}
+.menus.ivu-menu {
+    top: 10px;
+    left: 10px;
+    position: fixed;
+}
+.upgrades {
+    top: 0;
+    left: 0;
+    z-index: 1;
+    position: fixed;
+    .btn-close {
+        top: 10%;
+        right: 20%;
+        position: fixed;
+        cursor: pointer;
+    }
+    .size-range {
+        top: 80px;
+        left: 10px;
+        width: 100px;
+        position: fixed;
+    }
+    .unlock-plant {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        background-color: rgba(0, 0, 0, .5);
+        position: fixed;
+        overflow: auto;
+        transition: 300ms;
+        &.hide {
+            overflow: hidden;
+            transform: translate(0, -100%);
+        }
+        .content {
+            top: 50%;
+            left: 50%;
+            width: 700px;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            .item {
+                width: 48%;
+                margin: 1%;
+                padding: 10px;
+                color: #fff;
+                background-color: rgba(0, 0, 0, .5);
+                float: left;
+                display: flex;
+                justify-content: space-between;
+                position: relative;
+                cursor: pointer;
+                .image {
+                    width: 70px;
+                    height: 70px;
+                    padding: 10px;
+                    position: relative;
+                }
+                .info {
+                    flex: 1;
+                    padding-left: 10px;
+                }
+                .btn-profit,
+                .btn-speed {
+                    position: relative;
+                }
+                .ctrl {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                }
+                .ivu-icon {
+                    top: 50%;
+                    left: 50%;
+                    z-index: 1;
+                    opacity: .7;
+                    position: absolute;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+    }
+}
+
+.model-skill {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    position: fixed;
+    display: none;
+}
+
+.model-achievement {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 10;
+    position: fixed;
+    transition: transform 300ms ease-out;
+    &.hide {
+        transform: translate(0, -100%);
+    }
+    >.content {
+        top: 40%;
+        left: 50%;
+        width: 600px;
+        height: 500px;
+        border-radius: 5px;
+        background-color: #fff;
+        z-index: 1;
+        position: absolute;
+        overflow: hidden;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        .content-header {
+            padding: 15px;
+            height: 50px;
+            font-size: 18px;
+            border-bottom: 1px solid #fff;
+            color: #fff;
+            background-color: #3bf;
+            background-image: linear-gradient(right, #3bf, #6cf);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .btn-close {
+                font-size: 40px;
+                cursor: pointer;
+            }
+        }
+        .content-body {
+            flex: 1;
+            padding: 0 10px;
+            overflow: auto;
+        }
+        .item {
+            margin: 10px 0;
+            padding: 5px; 
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            display: flex;
+            box-shadow: 0 0 0 2px #fff, 0 0 0 3px #ccc;
+            position: relative;
+            overflow: hidden;
+            .complate {
+                top: 0;
+                right: 0;
+                width: 80px;
+                padding: 2px;
+                color: #fff;
+                background-color: yellowgreen;
+                position: absolute;
+                text-align: center;
+                transform: rotate(45deg) translate(0, -150%);
+                transform-origin: 0 100%;
+            }
+            .icon {
+                width: 50px;
+                height: 50px;
+                margin: 5px;
+                border-radius: 50%;
+                font-size: 30px;
+                color: gold;
+                background-color: #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                box-shadow: inset 0 0 5px orange;
+            }
+            .content {
+                flex: 1;
+                .title {
+                    padding: 0 5px;
+                    font-size: 18px;
+                    color: #3bf;
+                    background-image: linear-gradient(left, #ecf9ff, #fff);
+                }
+                .content {
+                    padding: 0 5px;
+                }
+            }
+            .progress-pnl {
+                @text-color: #fff;
+                height: 15px;
+                position: relative;
+                display: flex;
+                align-items: center;
+                .progress-content {
+                    background-color: #3bf;
+                }
+                .info {
+                    width: 100%;
+                    z-index: 10;
+                    text-align: center;
+                    position: absolute;
+                    text-shadow: 0 1px @text-color, 1px 0 @text-color, -1px 0 @text-color, 0 -1px @text-color;
+                }
+            }
+            .label-list {
+                top: 5px;
+                right: 50px;
+                position: absolute;
+                .label {
+                    border-color: #fff;
+                    background-color: #6cf;
+                }
+            }
+        }
+    }
+}

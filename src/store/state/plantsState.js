@@ -1,0 +1,90 @@
+let plants = [{
+  id: 1,
+  name: '西红柿',
+  speed: 5000,
+  cost: 10,
+  profit: 20,
+  unlockPrice: 2000,
+  state: 1,
+  grows: 'spring',
+  image: 'xihongshi.png',
+  totalGrown: 0
+}, {
+  id: 2,
+  name: '小麦',
+  speed: 1000,
+  cost: 0,
+  profit: 1,
+  state: 0,
+  grows: 'summer',
+  image: 'xiaomai.png',
+  totalGrown: 0
+}, {
+  id: 3,
+  name: '萝卜',
+  speed: 7000,
+  cost: 50,
+  profit: 200,
+  state: 1,
+  unlockPrice: 30000,
+  grows: 'autumn',
+  image: 'luobo.png',
+  totalGrown: 0
+}, {
+  id: 4,
+  name: '白菜',
+  speed: 9000,
+  cost: 1000,
+  profit: 3500,
+  state: 1,
+  unlockPrice: 5e+5,
+  grows: 'winter',
+  image: 'baicai.png',
+  totalGrown: 0
+}, {
+  id: 5,
+  name: '土豆',
+  speed: 10000,
+  cost: 10000,
+  profit: 40000,
+  unlockPrice: 75e+5,
+  state: 1,
+  grows: 'autumn',
+  image: 'tudou.png',
+  totalGrown: 0
+}, {
+  id: 6,
+  name: '豌豆',
+  speed: 11000,
+  cost: 1e+5,
+  profit: 5.5e+5,
+  unlockPrice: 9e+7,
+  state: 1,
+  grows: 'spring',
+  image: 'wandou.png',
+  totalGrown: 0
+}, {
+  id: 7,
+  name: '甘蔗',
+  speed: 12000,
+  cost: 20e+5,
+  profit: 80e+5,
+  unlockPrice: 13e+8,
+  state: 1,
+  grows: 'summer',
+  image: 'ganzhe.png',
+  totalGrown: 0
+}, {
+  id: 8,
+  name: '青椒',
+  speed: 13000,
+  cost: 3e+7,
+  profit: 9e+7,
+  unlockPrice: 18e+20,
+  state: 1,
+  grows: 'winter',
+  image: 'qingjiao.png',
+  totalGrown: 0
+}];
+
+export default plants;

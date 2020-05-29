@@ -1,0 +1,70 @@
+@import "page/bg";
+@import "page/garden";
+@import "page/plantpot";
+@import "page/plant-picker";
+@import "page/progress";
+@import "page/info";
+@import "page/hello";
+
+* {
+    user-select: none;
+}
+
+.icon {
+   width: 2em; height: 2em;
+   vertical-align: -0.15em;
+   fill: currentColor;
+   overflow: hidden;
+}
+
+.plant {
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+}
+
+/* 设置滚动条的样式 */
+::-webkit-scrollbar {
+    width:12px;
+}
+/* 滚动槽 */
+::-webkit-scrollbar-track {
+-webkit-box-shadow:inset006pxrgba(0,0,0,0.3);
+    border-radius:10px;
+}
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+    border-radius:10px;
+    background:rgba(0, 0, 0, .3);
+    -webkit-box-shadow:inset006pxrgba(0,0,0,0.5);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+    background:rgba(0, 0, 0, .3);
+}
+
+.pop-money {
+    @text-color: orange;
+    top: 0;
+    left: 0;
+    width: 200%;
+    text-shadow: 0 1px @text-color, 1px 0 @text-color, -1px 0 @text-color, 0 -1px @text-color;
+    font-size: 16px;
+    opacity: 1;
+    color: yellow;
+    z-index: 10;
+    text-align: center;
+    position: absolute;
+    transform: translate(-25%, -150%);
+    &.effects {
+        animation: fadeOut 500ms ease-out;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        transform: translate(-25%, 0);
+    }
+    100% {
+        transform: translate(-25%, -150%);
+    }
+}

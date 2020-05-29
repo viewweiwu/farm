@@ -1,0 +1,165 @@
+.bg {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #b3e8b3;
+    z-index: -1;
+    position: fixed;
+    transition: background-color 1s;
+    &.spring {
+        background-color: #b3e8b3;
+    }
+    &.summer {
+        background-color: #e8b3b3;
+    }
+    &.autumn {
+        background-color: #e8dcb3;
+    }
+    &.winter {
+        background-color: #b3d0e8;
+    }
+}
+.snow {
+    top: 0;
+    height: 100px;
+    width: 50px;
+    height: 50px;
+    z-index: 0;
+    position: fixed;
+    animation: down 5s ease-out;
+    pointer-events: none;
+    transform: translate(0, -100%);
+}
+@keyframes down {
+    0% {
+        top: 0;
+        transform: rotate(0);
+    }
+    100% {
+        top: 100%;
+        transform: rotate(360deg);
+    }
+}
+
+.rain {
+    top: 100%;
+    left: 0;
+    width: 2px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, .5);
+    z-index: 1;
+    position: fixed;
+    pointer-events: none;
+    animation: rain 1s linear infinite;
+}
+@keyframes rain {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: 100%;
+    }
+}
+
+.sun {
+    top: -100px;
+    right: -100px;
+    width: 300px;
+    height: 300px;
+    position: fixed;
+    transition: transform 1s;
+    &.hide {
+        transform: translate(100%, -100%);
+    }
+    .circle {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: #fff;
+        z-index: 1;
+        position: absolute;
+        &.circle2 {
+            background-color: transparent; 
+            box-shadow: 0 0 80px 20px #fff;
+        }
+    }
+    .sun-ring {
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        position: absolute;
+        animation: sun 30s infinite linear;
+        .ring1,
+        .ring2,
+        .ring3 {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            filter: blur(5px);
+            background-color: gold;
+            position: absolute;
+        }
+        .ring2 {
+            transform: rotate(30deg);
+        }
+        .ring3 {
+            transform: rotate(60deg);
+        }
+    }
+}
+
+@keyframes sun {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.leaves {
+    top: 100px;
+    left: 200px;
+    width: 100px;
+    height: 50px;
+    border-radius: 95% 5% 100% 0% ;
+    background-color: orange;
+    position: fixed;
+    animation: leaves1 10s infinite ease-in-out;
+    &.leaves2 {
+        animation: leaves2 10s infinite ease-out;
+    }
+}
+
+@keyframes leaves1 {
+    0% {
+        top: 0;
+        transform: translate(0, 0) rotate(0);
+    }
+    40% {
+        top: 35%;
+        transform: translate(-100%, 0) rotate(20deg);
+    }
+    70% {
+        top: 75%;
+        transform: translate(100%, 0) rotate(10deg);
+    }
+    100% {
+        top: 100%;
+        transform: translate(0, 0) rotate(0deg);
+    }
+}
+
+
+@keyframes leaves2 {
+    0% {
+        top: 0;
+        transform: translate(0, -100%) rotate3d(0, 0, 0, 0deg);
+    }
+    100% {
+        top: 100%;
+        transform: translate(0, 100%) rotate3d(2, 5, 2, 360deg);
+    }
+}

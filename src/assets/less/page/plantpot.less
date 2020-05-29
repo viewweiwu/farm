@@ -1,0 +1,57 @@
+.plantpot {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border: 1px solid #fff;
+    border-radius: 5%;
+    box-shadow: 0 14px 45px rgba(0,0,0,.247059), 0 10px 18px rgba(0,0,0,.219608);
+    background-color: #fff;
+    float: left;
+    user-select: none;
+    position: relative;
+    cursor: pointer;
+    transition: 300ms;
+    animation: bounceIn 1s;
+    .plant {
+        top: 15%;
+        left: 15%;
+        width: 70%;
+        height: 70%;
+        z-index: 0;
+        position: absolute;
+        animation: bounceIn 500ms ease-in-out;
+    }
+    @keyframes bounceIn {
+        from, 20%, 40%, 60%, 80%, to {
+            animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        }
+
+        0% {
+            opacity: 0;
+            transform: scale3d(.3, .3, .3);
+        }
+
+        20% {
+            transform: scale3d(1.1, 1.1, 1.1);
+        }
+
+        40% {
+            transform: scale3d(.9, .9, .9);
+        }
+
+        60% {
+            opacity: 1;
+            transform: scale3d(1.03, 1.03, 1.03);
+        }
+
+        80% {
+            transform: scale3d(.97, .97, .97);
+        }
+
+        to {
+            opacity: 1;
+            transform: scale3d(1, 1, 1);
+        }
+    }
+    
+}
